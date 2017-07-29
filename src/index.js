@@ -4,9 +4,27 @@
  * 作者：liuguanbang
  */
 
-const arr = [1, 2, 3,2,4,2,1,6,8,3,2,3,5];
+const arr = [100, 4, 200, 1, 3, 2, 2, 0];
 
-const a = new Set(arr);
-const b = [...a];
-console.log(a);
-console.log(b);
+const twoSum = (arr, target) => {
+	const myMap = new Map();
+
+	for (let i = 0; i < arr.length; i++) {
+		myMap.set(arr[i], i);
+	}
+
+	for (let i = 0; i < arr.length; i++) {
+		const v = myMap.get(target - arr[i]);
+		if (v !== null && v > i){
+			return [i, v];
+		}
+	}
+
+	return null;
+};
+
+const result = twoSum(arr, 4);
+console.log(result);
+
+const m = new Map();
+console.log(m.get('w')===null);
