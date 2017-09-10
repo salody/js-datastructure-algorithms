@@ -28,6 +28,6 @@ const threeSum = (arr) => {
 		}
 	}
 
-	// 使用Lodash库，对数组进行深度去重
+	// 使用Lodash库，对数组进行深度去重。自己实现比较麻烦要做各种的判断。
 	return _.uniqWith(result, _.isEqual);
 };

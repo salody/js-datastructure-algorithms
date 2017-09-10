@@ -1,12 +1,13 @@
 /**
- * 功能描述:
- * 2017/7/26
+ * 功能描述:Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+ For example, given array S = {-1 2 1 -4}, and target = 1.
+ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
+ * 2017/7/31
  * 作者：liuguanbang
  */
 
-const arr = [-1, 1, 2, -4];
-
 const threeSumClosest = (arr, target) => {
+	// 先排序
 	const sortArr = arr.sort();
 	let result = 0;
 	let minGap = Number.MAX_SAFE_INTEGER;
@@ -33,8 +34,3 @@ const threeSumClosest = (arr, target) => {
 	}
 	return result;
 };
-
-
-//const b = [-1, [2, 3], 1, 2, -1];
-const result = threeSumClosest(arr, 1);
-console.log(result);
