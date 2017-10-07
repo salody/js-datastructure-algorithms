@@ -9,7 +9,7 @@ const longestConsecutiveSequence = (arr) => {
 	const mySet = new Set(arr);
 	let longest = 0;
 
-	// 用一个哈希表存储所有出现过的元素，对每个元素，以该元素为中心，往左右扩张，直到不连续为止，记录下最长的长度。
+	// 存储所有出现过的元素，对每个元素，以该元素为中心，往左右扩张，直到不连续为止，记录下最长的长度。
 	for (let i of mySet) {
 		let length = 1;
 		for (let j = i - 1; mySet.has(j); j--) {
